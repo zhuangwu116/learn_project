@@ -37,5 +37,24 @@ def genData(numPoints, bias, variance):
 
         x[i][1] = i
 
+        y[i] = (i + bias) + random.uniform(0, 1) * variance
 
+    return x, y
 
+x, y = genData(100, 25, 10)
+
+#print("x:")
+#
+#print(x)
+#
+#print("y:")
+#
+#print(y)
+#
+m, n = np.shape(x)
+
+m_y, n_y = np.shape(y)
+
+print("x shape:", str(m), " ", str(n))
+
+print("y length：", str(n_y))
